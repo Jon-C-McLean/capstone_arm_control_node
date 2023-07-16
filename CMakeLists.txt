@@ -22,6 +22,7 @@ catkin_package(
 )
 
 include_directories(
+  include/capstone_hwlib
   ${catkin_INCLUDE_DIRS}
 )
 
