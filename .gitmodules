@@ -1,0 +1,4 @@
+[submodule "include/capstone_hwlib"]
+	path = include/capstone_hwlib
+	url = git@github.com:Jon-C-McLean/capstone_hwlib.git
+	branch = main

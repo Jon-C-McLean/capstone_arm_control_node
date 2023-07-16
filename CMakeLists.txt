@@ -25,6 +25,16 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
 )
 
+add_library(
+  hwlib
+  include/capstone_hwlib/canio.c
+  include/capstone_hwlib/motor.c
+)
+target_link_libraries(
+  hwlib
+  ${catkin_LIBRARIES}
+)
+
 add_executable(${PROJECT_NAME}
   src/main.cpp
 )
@@ -32,4 +42,5 @@ add_executable(${PROJECT_NAME}
 target_link_libraries(
   ${PROJECT_NAME}
   ${catkin_LIBRARIES}
+  hwlib
 )
