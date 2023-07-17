@@ -36,6 +36,17 @@ target_link_libraries(
   ${catkin_LIBRARIES}
 )
 
+add_library(
+  arm
+  src/arm/ArmController.cpp
+)
+
+target_link_libraries(
+  arm
+  hwlib
+  ${catkin_LIBRARIES}
+)
+
 add_executable(${PROJECT_NAME}
   src/main.cpp
 )
@@ -44,4 +55,5 @@ target_link_libraries(
   ${PROJECT_NAME}
   ${catkin_LIBRARIES}
   hwlib
+  arm
 )
